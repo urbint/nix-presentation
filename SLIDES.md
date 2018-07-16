@@ -151,13 +151,13 @@ date: July 13, 2018
 
 ### Nix the language
   - atoms
-    - ints, bools, uri, null
+    - `int`, `bool`, `uri`, `null`
 
 ---
 
 ### Nix the language
   - `inherit` is like `RecordWildCards` packing `let name = "joe"; age = 33; in p@Person {..} = person`
-    - a = { inherit (pkgs) foo }, is the same as `{ foo = pkgs.foo }`
+    - `a = { inherit (pkgs) foo }`, is the same as `{ foo = pkgs.foo }`
 
 ---
 
@@ -238,6 +238,12 @@ date: July 13, 2018
 
 ---
 
+### Garbage Collection
+  - `man nix-collect-garbage`
+  - `nix-collect-garbage -d --dry-run`
+
+---
+
 ### Nyan example!
   - Go do the `nyan` example
 
@@ -303,10 +309,10 @@ date: July 13, 2018
 ### Nix and Docker
   - Docker image registry also available (if not using dockerhub).
     - `services.dockerRegistry.enable = true;`
-	- (https://github.com/NixOS/nixpkgs/blob/release-18.03/nixos/modules/services/misc/docker-registry.nix)[Docker Registery]
+	- [Docker Registery](https://github.com/NixOS/nixpkgs/blob/release-18.03/nixos/modules/services/misc/docker-registry.nix)
   - `Kubernetes` addons
     - `kubelet`, `kubeconfig`, etc.
-    - (https://github.com/NixOS/nixpkgs/blob/release-18.03/nixos/modules/services/cluster/kubernetes/default.nix)[Kubernetes]
+    - [Kubernetes](https://github.com/NixOS/nixpkgs/blob/release-18.03/nixos/modules/services/cluster/kubernetes/default.nix)
 
 ---
 
